@@ -1,0 +1,446 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+background-color: white;
+display: grid;
+grid-template: 1fr / 1fr;
+grid-template-areas:
+"nav "
+"hero"
+"highlights"
+"testimonials"
+"about"
+"footer"
+;
+}
+
+.nav {
+grid-area: nav;
+}
+
+.hero {
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #495E57;
+  grid-area: hero;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.highlights {
+  grid-area: highlights;
+}
+.testimonials {
+  grid-area: testimonials;
+}
+.about {
+  grid-area: about;
+}
+.footer {
+  grid-area: footer;
+}
+
+.navli li {
+  display: flex;
+}
+
+  .navli a {
+  text-decoration:none;
+  font-family: 'Karla';
+  font-style: normal;
+  display: flex;
+  font-size: minmax(17pxa);
+  align-items: center;
+  color: #000000;
+  white-space: initial;
+  }
+
+  .navli {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 15px;
+  justify-content: center;
+  }
+
+  .logo {
+    margin-right: 5%;
+  }
+
+.hero h1{
+font-family: 'Markazi Text';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+line-height: 77px;
+color: #F4CE14;
+margin-top: 5%;
+}
+
+.hero h2{
+  font-family: 'Markazi Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0;
+  color: #EDEFEE;
+}
+
+.hero p {
+font-family: 'Karla';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+color: #EDEFEE;
+padding-right: 10%;
+}
+
+.reserveButton {
+  height: 60px;
+  width: 218px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  background: #F4CE14;
+  border-radius: 20px;
+  margin-bottom: 5%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.restauranphoto {
+    border-radius: 15px;
+    width: 375px;
+    height: 325px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 5%;
+}
+
+/*highlights*/
+.highlights{
+  gap: 25px;
+  margin-left: 0%;
+  background-color: white;
+  grid-area: highlights;
+  display: grid;
+  justify-content:center;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr;
+  grid-template-areas:
+    "title3 title3 click2"
+    "speacial1 speacial2 speacial3" ;
+}
+
+.click2 {
+  align-self:center;
+  justify-self:center ;
+  height: 60px;
+  width: 218px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  background: #F4CE14;
+  border-radius: 20px;
+}
+
+.title3 {
+  grid-area: title3;
+  margin-left: 5%;
+}
+
+.click2 {
+  grid-area: click2;
+}
+
+.speacial1 .speacial2 .speacial3 {
+  border: 1px solid #000000;
+  border-radius: 16px 16px 0px 0px;
+  align-self: center;
+  justify-self: center ;
+}
+
+.specialimage {
+  width: 267px;
+  height: 185px;
+  border: 1px solid #000000;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.box-text {
+  background-color: #EDEFEE;
+  width: 268px;
+  height: 185px;
+  grid-area: box-text;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "foodtitle foodtitle"
+    "fooddesc fooddesc"
+    "ordering ordering" ;
+}
+
+.ordering {
+  grid-area: ordering;
+  display: flex;
+  align-items:flex-end;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.foodtitle{
+  grid-area: foodtitle;
+  display: flex;
+  align-items:baseline;
+  justify-content: space-between;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.foodname {
+  font-family: 'Markazi Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.foodprice {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #EE9972;
+}
+
+.fooddesc {
+  grid-area: fooddesc;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #495E57;
+}
+
+.delivery {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 4%;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.cart {
+  align-self: flex-end;
+}
+
+.box-image {
+  width: 267px;
+  height: 185px;
+}
+
+/*Testimonials CSS Below*/
+.testimonials {
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.favicon {
+  width: 100px;
+  height: 100px;
+}
+
+.review1 {
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10%;
+  border-radius: 10px;
+}
+
+.testimonials1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.testtext {
+  font-family: 'Markazi Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+  color: #000000;
+}
+
+/*About CSS Below*/
+.about {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.jpg1, .jpg2 {
+  width: 200px;
+  height:200px;
+}
+
+.rightabout {
+  display: grid;
+  padding-left: 10%;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "xxxxx jpg1 "
+    "jpg2 xxxx" ;
+}
+
+.jpg1 {
+  grid-area: jpg1;
+  position: relative;
+  right: 100px;
+  z-index: 1;
+}
+
+.jpg2 {
+  grid-area: jpg2;
+  position: relative;
+  bottom: 100px;
+}
+
+
+/*Footer CSS Below*/
+.footerTitles {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  color: #495E57;
+}
+
+.footer a {
+  text-decoration: none;
+  font-family: 'Karla';
+  font-style: normal;
+  font-size: 17px;
+  color: #000000;
+  white-space: initial;
+  }
+
+.footer {
+  background-color: #D9D9D9;
+  padding:5% 5% 5% 5%;
+  gap: 50px;
+  grid-area: footer;
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-template-areas: "fLogo navigation contact social" ;
+}
+
+.fLogo {
+  grid-area: fLogo;
+}
+
+#navigation {
+  grid-area: navigation;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.social {
+  grid-area: social;
+}
+
+#navigation li {
+font-family: 'Karla';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 130%;
+color: #333333;
+list-style-type: none;
+}
+
+#navigation ul {
+  padding-left: 0;
+}
