@@ -1,7 +1,14 @@
-function Reservation() {
+import BookingForm from './BookingForm';
+import BookingPage from './BookingPage';
 
-    return (
-        <></>
-    );
+function App() {
+  return (
+    <>
+    <div class="container">
+      <BookingPage/>
+    </div>
+    </>
+  );
 }
-export default Reservation;
+
+export default App;

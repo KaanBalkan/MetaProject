@@ -16,5 +16,5 @@ function Hero() {
         </>
         );
     }
-asdasd
+
     export default Hero;
