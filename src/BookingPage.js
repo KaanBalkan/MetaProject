@@ -1,31 +1,36 @@
 import React, { useState, useReducer } from "react";
 import BookingForm from "./BookingForm";
+import { fetchData } from "./api";
 
 function BookingPage() {
     // Declare state variables
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
-    // handle state change for available times
-    function updateTimes(state, action) {
-        switch (action.type) {
-            case 'update':
-                // update available times based on selected date
-                return state;
-            default:
-                return state;
-        }
+// handle state change for available times
+function updateTimes(state, action) {
+    switch (action.type) {
+        case 'update':
+            // update available times based on selected date
+            const selectedDate = action.payload;
+            const data = fetchData(selectedDate);
+            return data.availableTimes;
+        default:
+            return state;
     }
+}
 
-    // initialize available times
-    function initializeTimes() {
-        return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    }
+// initialize available times
+function initializeTimes() {
+    const today = new Date();
+    const data = fetchData(today);
+    return data.availableTimes;
+}
 
-    return (
-        <>
-            <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
-        </>
-    );
+return (
+    <>
+        <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+    </>
+);
 }
 
 export default BookingPage;

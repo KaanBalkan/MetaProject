@@ -76,13 +76,14 @@ export function initializeTimes() {
     return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 }
 export function updateTimes(state, action) {
-    switch(action.type) {
+    switch(action) {
         case 'update':
-            return action.availableTimes;
+            return action.payload.availableTimes;
         default:
-            return state;
+            return state.availableTimes;
     }
 }
+
 
 
 export default BookingForm;
